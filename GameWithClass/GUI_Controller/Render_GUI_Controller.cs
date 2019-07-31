@@ -9,8 +9,8 @@ namespace GameWithClass.GUI_Controller
      class Render_GUI_Controller
     {
 
-       private CreditWindow _creditWindow;
-       private GameWindow _gameWindow;
+       private readonly CreditWindow _creditWindow;
+       private readonly GameWindow _gameWindow;
 
         public Render_GUI_Controller(CreditWindow creditWindow, GameWindow gameWindow)
         {
