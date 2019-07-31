@@ -20,8 +20,6 @@ namespace GameWithClass.GUI_Controller
         public CreditWindow CreditWindow { get; private set; }
         public GameWindow GameWindow { get; private set; }
 
-      
-
 
         // KONSTRUKTORIUS
 
