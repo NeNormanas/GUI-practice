@@ -18,7 +18,7 @@ namespace GameWithClass.Game
 
         public void MoveDown()
         {
-            Y--;
+            Y++;
         }
 
         
@@ -26,6 +26,13 @@ namespace GameWithClass.Game
         public int GetId()
         {
             return id;
+        }
+
+        public override void Render()
+        {
+            Console.SetCursorPosition(X, Y);
+            Console.WriteLine(GetId().ToString());
+            
         }
 
     }

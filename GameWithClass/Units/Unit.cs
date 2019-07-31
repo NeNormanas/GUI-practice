@@ -32,6 +32,13 @@ namespace GameWithClass.Game
         {
             return Y;
         }
+
+
+        public virtual void Render()
+        {
+            Console.SetCursorPosition(0, 0);
+
+        }
     }
 
     

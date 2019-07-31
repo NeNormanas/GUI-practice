@@ -14,6 +14,8 @@ namespace GameWithClass.Game
             Main_GUI_Controller mainGuiController = new Main_GUI_Controller();
             mainGuiController.StartGuiController();
 
+            
+
             Console.WriteLine("PROGRAM IS TURNED OFF");
 
 

@@ -24,7 +24,14 @@ namespace GameWithClass.Game
         {
             X--;
         }
-        
+
+        public override void Render()
+        {
+            Console.SetCursorPosition(X, Y);
+            Console.WriteLine("HERO");
+
+        }
+
 
     }
 }

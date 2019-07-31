@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,7 +11,7 @@ namespace GameWithClass.Game
         private int hight;
 
         private Hero hero; // galim heroju suskurti ir per konstruktoriu arba is kart kaip kintamaji padaryti kartu su plociais auksciais
-
+        
         private List<Enemy> enemies = new List<Enemy>();
 
 
@@ -30,6 +31,8 @@ namespace GameWithClass.Game
                         
 
         }
+
+       
 
         public void AddEnemy(Enemy enemy)
         {
@@ -60,7 +63,11 @@ namespace GameWithClass.Game
         {
             foreach (Enemy enemy in enemies)
             {
-                enemy.MoveDown();
+                if (enemy.GetY() >= 0 && enemy.GetY() < 50)
+                {
+                    enemy.MoveDown();
+                }
+               
 
             }
 
@@ -81,11 +88,22 @@ namespace GameWithClass.Game
 
         public void Render()
         {
-            hero.PrintInfo();
+            
+            hero.Render();
+            //hero.PrintInfo();
+            
+
             foreach (Enemy enemy in enemies)
             {
-                enemy.PrintInfo();
+                if (enemy.GetY() < 50)
+                {
+                    enemy.Render();
+                    //enemy.PrintInfo();
+
+                }
+                
             }
+      
         }
 
     }
