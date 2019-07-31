@@ -31,7 +31,7 @@ namespace GameWithClass.GUI_Controller
         {
             switch (button.Label)
             {
-                case "Start": Console.Clear(); _myGame.StartGame(); break;
+                case "Start": Console.Clear(); _myGame.StartGame(); Console.Clear(); _Render_Controller.ShowGameWindow(); break;
                 case "Credits": _Render_Controller.ShowCreditWindow(); _creditWindowIsOpen = true; break;
                 case "Quit": Console.Clear(); _closeProgram = true; break;
 
@@ -51,7 +51,20 @@ namespace GameWithClass.GUI_Controller
 
                 switch (pressedChar.Key)
                 {
-                    case ConsoleKey.Escape: Console.Clear(); Console.WriteLine("PROGRAMA ISJUNGTA"); break;
+                    case ConsoleKey.Escape:
+
+                        if (_creditWindowIsOpen == true)
+                        {
+                            Console.Clear(); _Render_Controller.ShowGameWindow();
+                            _creditWindowIsOpen = false;
+                        }
+                        else
+                        {
+                            _closeProgram = true;
+                            Console.Clear();
+                        }
+                        break;
+
                     case ConsoleKey.RightArrow: _GuiButtonsController.ActiveNextRightButton(ButtonsList); _gameWindow.RenderButtons(); break;
                     case ConsoleKey.LeftArrow: _GuiButtonsController.ActiveNextLeftButton(ButtonsList); _gameWindow.RenderButtons(); break;
                     case ConsoleKey.Enter:
@@ -70,8 +83,11 @@ namespace GameWithClass.GUI_Controller
                 }
 
 
-            } while (pressedCharCode != 27 && _closeProgram != true);
+            } while (_closeProgram != true);
         }
+
+        
+        
 
     }
 }

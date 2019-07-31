@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameWithClass.GUI_Controller;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,6 +8,7 @@ namespace GameWithClass.Game
     class GameController
     {
         private GameScreen myGame;
+               
 
         public void StartGame()
         {
@@ -33,6 +35,7 @@ namespace GameWithClass.Game
         public void StartGameLoop()
         {
             bool needToRender = true;
+            
 
             do
             {
@@ -47,6 +50,7 @@ namespace GameWithClass.Game
                     {
                         case ConsoleKey.Escape:
                             needToRender = false;
+
                             break;
                         case ConsoleKey.RightArrow:
                             myGame.MoveHeroRight();
@@ -55,9 +59,15 @@ namespace GameWithClass.Game
                             myGame.MoveHeroLeft();
                             break;
                     }
-                    myGame.Render();
 
-                    System.Threading.Thread.Sleep(800);
+                        myGame.Render();
+
+                    if (pressedChar.Key != ConsoleKey.Escape)
+                    {
+                        System.Threading.Thread.Sleep(800);
+                    }
+
+                    
 
 
                 }
@@ -68,34 +78,7 @@ namespace GameWithClass.Game
         }
 
 
-        //myGame.Render();
-
-        //myGame.MoveHeroLeft();
-
-
-        //myGame.Render();
-
-        //Enemy secondEnemy = myGame.GetEnemyById(1);
-        //Enemy forthEnemy = myGame.GetEnemyById(3);
-
-        //if (secondEnemy != null && forthEnemy != null) // visada daryti tikrinimus, kad nebutu null, nes su null reiksme nulus programa.
-        //{
-        //    forthEnemy.MoveDown();
-        //    secondEnemy.MoveDown();
-        //}
-
-        //myGame.Render();
-
-        //myGame.MoveAllEnemiesDown();
-
-        //myGame.Render();
-
-
-        // TASK 4.
-
-
-
-
+        
     }
 
 

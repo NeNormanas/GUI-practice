@@ -12,7 +12,7 @@ namespace GameWithClass.GUI_Controller
 
         private readonly  GameController _myGame;
         private readonly Render_GUI_Controller _Render_Controller;
-        private readonly User_GUI_Controller _Gui_User_Controller;
+        private  User_GUI_Controller _Gui_User_Controller;
         private readonly Buttons_GUI_Controller _Gui_Buttons_Controller;
         private readonly List<Button> _ButtonsInGameWindow;
 
