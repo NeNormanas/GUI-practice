@@ -1,4 +1,5 @@
 ﻿using GameWithClass.GUI;
+using GameWithClass.GUI_Controller;
 using System;
 
 namespace GameWithClass.Game
@@ -10,19 +11,10 @@ namespace GameWithClass.Game
 
             Console.CursorVisible = false;
 
-            GameWindow gameWindow = new GameWindow();
+            GUi_controller guiController = new GUi_controller();
+            guiController.StartGuiController();
 
-            CreditWindow creditWindow = new CreditWindow();
-
-            GuiController guiController = new GuiController(gameWindow, creditWindow);
-
-            guiController.ShowMenu();
-            guiController.UserActivity();
-
-
-
-
-            Console.WriteLine("PROGRAMA BAIGTA");
+            Console.WriteLine("PROGRAM IS TURNED OFF");
 
 
         }
