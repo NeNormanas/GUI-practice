@@ -11,7 +11,7 @@ namespace GameWithClass.Game
 
             Console.CursorVisible = false;
 
-            GUi_controller guiController = new GUi_controller();
+            Main_GUI_Controller guiController = new Main_GUI_Controller();
             guiController.StartGuiController();
 
             Console.WriteLine("PROGRAM IS TURNED OFF");

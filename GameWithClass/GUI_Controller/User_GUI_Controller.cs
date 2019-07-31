@@ -6,18 +6,18 @@ using System.Text;
 
 namespace GameWithClass.GUI_Controller
 {
-    class gui_users_activity
+    class User_GUI_Controller
     {
-        private List<Button> _ButtonsInGameWindows;
-        private GameController _myGame;
-        private gui_render_controller _Render_Controller;
-        private GameWindow _gameWindow;
-        private gui_buttons_controller _GuiButtonsController;
+        private readonly List<Button> _ButtonsInGameWindows;
+        private readonly GameController _myGame;
+        private readonly Render_GUI_Controller _Render_Controller;
+        private readonly GameWindow _gameWindow;
+        private readonly Buttons_GUI_Controller _GuiButtonsController;
 
         private bool _closeProgram = false;
         private bool _creditWindowIsOpen = false;
 
-        public gui_users_activity(List<Button> ButtonsInGameWindows, GameController myGame, gui_render_controller Render_Controller, GameWindow gameWindow, gui_buttons_controller GuiButtonsController)
+        public User_GUI_Controller(List<Button> ButtonsInGameWindows, GameController myGame, Render_GUI_Controller Render_Controller, GameWindow gameWindow, Buttons_GUI_Controller GuiButtonsController)
 
         {
             _ButtonsInGameWindows = ButtonsInGameWindows;

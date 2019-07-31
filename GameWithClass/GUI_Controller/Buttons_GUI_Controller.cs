@@ -6,14 +6,14 @@ using System.Text;
 
 namespace GameWithClass.GUI_Controller
 {
-    class gui_buttons_controller 
+    class Buttons_GUI_Controller
     {
 
         public List<Button> ButtonsInGameWindows { get; private set; }
         public List<Button> ButtonsInCreditWindows { get; private set; }
 
         
-        public gui_buttons_controller(CreditWindow creditWindow, GameWindow gameWindow)
+        public Buttons_GUI_Controller(CreditWindow creditWindow, GameWindow gameWindow)
         {
             CreditWindow _CreditWindow = creditWindow;
             GameWindow _GameWindow = gameWindow;

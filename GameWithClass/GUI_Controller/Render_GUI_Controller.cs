@@ -6,13 +6,13 @@ using System.Text;
 
 namespace GameWithClass.GUI_Controller
 {
-     class gui_render_controller
+     class Render_GUI_Controller
     {
 
        private CreditWindow _creditWindow;
        private GameWindow _gameWindow;
 
-        public gui_render_controller(CreditWindow creditWindow, GameWindow gameWindow)
+        public Render_GUI_Controller(CreditWindow creditWindow, GameWindow gameWindow)
         {
             _creditWindow = creditWindow;
             _gameWindow = gameWindow;
