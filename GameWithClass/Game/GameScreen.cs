@@ -10,7 +10,7 @@ namespace GameWithClass.Game
         private int width;
         private int hight;
 
-        private Hero hero; // galim heroju suskurti ir per konstruktoriu arba is kart kaip kintamaji padaryti kartu su plociais auksciais
+        public Hero hero { get; set; } // galim heroju suskurti ir per konstruktoriu arba is kart kaip kintamaji padaryti kartu su plociais auksciais
         
         private List<Enemy> enemies = new List<Enemy>();
 
@@ -90,16 +90,13 @@ namespace GameWithClass.Game
         {
             
             hero.Render();
-            //hero.PrintInfo();
-            
-
+           
             foreach (Enemy enemy in enemies)
             {
                 if (enemy.GetY() < 50)
                 {
                     enemy.Render();
-                    //enemy.PrintInfo();
-
+                    
                 }
                 
             }

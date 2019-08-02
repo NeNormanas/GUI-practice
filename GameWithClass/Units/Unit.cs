@@ -8,7 +8,7 @@ namespace GameWithClass.Game
     {
         protected int X;
         protected int Y;
-        protected string Name; // galima plikti ir private, nes kitur nenaudoju niekur
+        protected string Name; 
 
         public Unit(int x, int y, string name)
         {

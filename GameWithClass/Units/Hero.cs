@@ -10,7 +10,7 @@ namespace GameWithClass.Game
        
         public Hero(int x, int y, string name) : base(x, y, name)
         {
-            
+           
 
         }
 
